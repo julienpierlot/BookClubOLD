@@ -19,7 +19,7 @@
           <li class="nav-li"><a class="link-nav"><%= link_to "My Profile", user_path(current_user.id) %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Logout", :logout, method: :post %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Find a book buddy", '/' %></a></li>
-          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", '/' %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", books_path %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Contact Us", '/' %></a></li>
         </ul>
       <% else %>
@@ -29,7 +29,7 @@
           <li class="nav-li"><a class="link-nav"><%= link_to "Register", new_user_path %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Login", :login %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Find a book buddy", '/' %></a></li>
-          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", '/' %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", books_path %></a></li>
           <li class="nav-li"><a class="link-nav"><%= link_to "Contact Us", '/' %></a></li>
       <% end %>
     </div>

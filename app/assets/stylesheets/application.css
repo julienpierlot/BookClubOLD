@@ -16,10 +16,12 @@
 
 *{
   margin:0;
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 .navigation{
   background-color: #071726;
+    text-align: right;
     height: 80px;
     margin: 0;
     width: 100%;
@@ -33,8 +35,24 @@
 }
 
 .nav-li{
+  text-decoration: none;
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
   padding: 10px;
+  border: 1px solid #071726;
+}
+
+.nav-li:hover{
+  border: 1px solid white;
+}
+
+a{
+  color: grey;
+  text-decoration: none;
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+  background-color: #071726;
 }
