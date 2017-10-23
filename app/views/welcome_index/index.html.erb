@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Bookclub</title>
+  <meta name="The-book-club" content="width=device-width, initial-scale=1.0">
+ </head>
+
+<body>
+
+  	<header class="banner">
+      <h1>The Bookclub</h1>
+  		<p>You are passionate about reading? Share you favorite books with your book buddies!
+      <br>You'll get the chance to broaden your horizons and you can even share your best quotes!</p>
+  	</header>
+
+    <div class="about" id="about-section">
+      <h1 class="about-title">About us</h1>
+      <h2 class="about-subtitle"> Share a book, meet a book buddy! </h2>
+      <p class="about-text"> Being books enthusiasts, we always believed litterature could bring people closer together and that is what we aim to do with The Book Clun.
+        <br> If you have a book you would like to share to the world, sign up so that a book buddy can enjoy it.
+        <br> If you want to talk about litterature or discover a new book, look for a buddy close to you.
+      </p>
+      <q class="about-quote">Because of the implication</q>
+    </div>
+
+  <div class="find-buddy">
+    <h1>Find a book buddy around you</h1>
+    <form class ="form-search" id="form-section" action="" method="get">
+     <ul class="form-ul">
+        <li class="form-li"><input type="text" name="Country" placeholder="Country" class="fields-search"></li>
+  			<li class="form-li"><input type= "text" name="City" placeholder="City" class="fields-search"></li>
+  			<li class="form-li"><input type="text" name="Genre" placeholder="Genre" class="fields-search"></li>
+        <li class="form-li"><input type="text" name="Author" placeholder="Author" class="fields-search"></li>
+  			<li class="form-li"><input type="submit" value="Search" id="button-validate" class="fields-search"></li>
+		  </ul>
+	   </form>
+
+     <div class="top-buddies">
+       <ul class="buddies-list">Our Book Buddies </ul>
+       <% @users.each do |user| %>
+        <li class="buddy-item"><%= user.pseudo %>
+          <button class="buddy-button"><%= link_to "Check his profile", user %></button>
+        </li>
+       <% end %>
+     </div>
+
+     <footer class="footer">
+       <ul>
+         <li><a href="https://www.facebook.com/JuPierlot" target="_blank"><img src="https://media.giphy.com/media/ijEiXYEo9DBxm/giphy.gif" alt="What the Deuce" class="image-footer" id="fb_footer"></a></li>
+         <li><a href="https://www.instagram.com/jp_gooner/" target="_blank"><img src="https://media.giphy.com/media/uo6rcjwHSAFsQ/giphy.gif" alt="What the Deuce" class="image-footer"></a></li>
+         <li><a href="https://twitter.com/jp_gooner" target="_blank"><img src="https://media.giphy.com/media/SMKiEh9WDO6ze/giphy.gif" alt="What the Deuce" class="image-footer"></a></li>
+       </ul>
+
+       <a href="mailto:pierlot.julien@gmail.com?subject= Contact The Book Club"><h1 class="footer-title"> Contact<br> The Book Club</h1></a>
+       <p class="footer-subtitle">2017 The Book Club. All rights reserved</p>
+     </footer>
+
+</body>
+
+</html>

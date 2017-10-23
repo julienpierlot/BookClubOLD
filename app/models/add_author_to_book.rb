@@ -1,0 +1,2 @@
+class AddAuthorToBook < ApplicationRecord
+end

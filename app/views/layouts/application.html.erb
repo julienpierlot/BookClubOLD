@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+    <div class="navigation" id="nav">
+      <% if current_user %>
+        <ul class="nav-ul">
+          <li class="nav-logo" id><a class="link-logo"><%= link_to "The Book Club", '/' %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "About us", '/#about-section'%></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "My Profile", user_path(current_user.id) %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Logout", :logout, method: :post %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Find a book buddy", :users %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", books_path %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Contact Us", '/' %></a></li>
+        </ul>
+      <% else %>
+        <ul class="nav-ul">
+          <li class="nav-logo" id><a class="link-logo"><%= link_to "The Book Club", '/' %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "About us", '/#about-section'%></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Register", new_user_path %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Login", :login %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Find a book buddy", :users %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Exchange a book", books_path %></a></li>
+          <li class="nav-li"><a class="link-nav"><%= link_to "Contact Us", '/' %></a></li>
+      <% end %>
+    </div>
+    <div>
+      <p id="notice"><%= flash[:notice] %></p>
+      <p id="alert"><%= flash[:alert] %></p>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
